@@ -35,6 +35,16 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=100)),
             ],
         ),
+        migrations.CreateModel(
+            name='Leads',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('email', models.CharField(max_length=50)),
+                ('fullname', models.CharField(max_length=100)),
+                ('phone', models.CharField(max_length=100)),
+                ('library', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='book.Library')),
+            ],
+        ),
         migrations.AddField(
             model_name='book',
             name='libraries',

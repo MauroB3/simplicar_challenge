@@ -1,0 +1,96 @@
+Instrucciones:
+    $ python manage.py makemigrations
+    $ python manage.py migrate
+    $ python manage.py loaddata book/fixtures/data.json
+    $ python manage.py runserver
+
+
+
+
+
+------------------------------------
+
+                LIBRARY
+
+Path: /domain/api/library/<id>
+Method: GET
+
+Path: /domain/api/library/<id>
+Method: POST
+Body:
+    {
+        "name": "William Mendez"
+    }
+
+Path: /domain/api/library/
+Method: PUT
+Body:
+    {
+        "name": "William Mendez"
+    }
+
+------------------------------------
+
+                BOOK
+
+Path: /domain/api/book/<id>
+Method: GET
+
+Path: /domain/api/book/<id>
+Method: POST
+Body:
+    {
+        "title": "Libro modificado",
+        "author": 61,
+        "libraries": [1, 2]
+    }
+
+Path: /domain/api/book/
+Method: PUT
+Body:
+    {
+        "title": "Nuevo libro",
+        "author": 61,
+        "libraries": [1, 2]
+    }
+
+Path: /domain/api/book/search?text=<TEXTO>
+Method: GET
+
+
+------------------------------------
+
+                AUTHOR
+
+Path: /domain/api/author/<id>
+Method: GET
+
+Path: /domain/api/author/<id>
+Method: POST
+Body:
+    {
+        "first_name": "Lisaa",
+        "last_name": "Rivera"
+    }
+
+Path: /domain/api/author/
+Method: PUT
+Body:
+    {
+        "first_name": "Mauro",
+        "last_name": "Bailon"
+    }
+
+------------------------------------
+
+                LEADS
+
+Path: /domain/api/leads/
+Method: POST
+Body:
+    {
+        "email": "reekremag@gmail.com",
+        "fullname": "Mauro Bailon",
+        "phone": "1139156379",
+        "library": 1
+    }
