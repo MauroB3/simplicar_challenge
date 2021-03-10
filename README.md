@@ -18,6 +18,11 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 $ python manage.py loaddata book/fixtures/data.json
 ```
+Como no tenemos un sistema de login, necesitamos crear algun tipo de usuario para usar mas adelante en los endpoints protegidos con JWT. Vamos a crear un superusuario con el comando que nos proporciona django:
+```
+$ python manage.py createsuperuser
+```
+
 Finalmente iniciamos la app con:
 ```
 $ python manage.py runserver
