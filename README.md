@@ -67,16 +67,16 @@ $ python manage.py runserver
 
 Esta ruta esta protegida con JWT. Para poder utilizarla es necesario incluir en el head un token de acceso. Para obtener el token es necesario hacer un POST al path **/domain/api/token/** con el usuario y contraseña generado al principio (ya que no hay implementado un login), como se ve en la imagen:
 
-![Imagen 1](./images/imagen_1.png)
+![Imagen 1](/images/imagen_1.png)
 
 Generado el token, podemos hacer el POST a **/domaind/api/leads/** tal como esta en la tabla de arriba, incluyendo el token en el header:
 
-![Imagen 2](./images/imagen_2.png)
+![Imagen 2](/images/imagen_2.png)
 
 
 Este token expira cada 5 minutos, para obtener un nuevo token hay que hacer un POST al path **/domain/api/token/refresh/** indicando el token refresh que obtuvimos en el primer paso:
 
-![Imagen 3](./images/imagen_3.png)
+![Imagen 3](/images/imagen_3.png)
 
 </details>
 
