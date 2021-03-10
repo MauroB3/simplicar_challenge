@@ -29,6 +29,9 @@ Body:
         "name": "William Mendez"
     }
 
+Path: /domain/api/library/<ID>/books/
+Method: GET
+
 ------------------------------------
 
                 BOOK
