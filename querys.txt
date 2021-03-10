@@ -88,6 +88,8 @@ Body:
 
                 LEADS
 
+Requisito: Incluir token en el head
+
 Path: /domain/api/leads/
 Method: POST
 Body:
@@ -97,3 +99,4 @@ Body:
         "phone": "1139156379",
         "library": 1
     }
+

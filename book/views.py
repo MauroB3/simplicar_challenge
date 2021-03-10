@@ -4,6 +4,8 @@ from django.http.response import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
+
 
 from .models import Book, Author, Library
 from .serializers import LibrarySerializer, BookSerializer, AuthorSerializer, LeadsSerializer
@@ -145,6 +147,7 @@ class AuthorPutView(APIView):
 
 
 class LeadPostView(APIView):
+    permission_classes = [IsAuthenticated]
 
     def post(self, request, format=None):
         serializer = LeadsSerializer(data=request.data)
