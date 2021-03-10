@@ -67,7 +67,7 @@ Para que se realize el envio de email al momento de crear un lead es necesario c
 </details>
 
 <details>
-<summary> Book  </summary>
+<summary> Leads  </summary>
 
 | Path | Method | Body example |
 | --- | --- | --- |
