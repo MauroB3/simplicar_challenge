@@ -28,6 +28,10 @@ Finalmente iniciamos la app con:
 $ python manage.py runserver
 ```
 
+# Envio de email
+
+Para que se realize el envio de email al momento de crear un lead es necesario configurar los parametros **EMAIL_HOST_USER** y **EMAIL_HOST_PASSWORD** en el archivo settings.py.
+
 # Endpoints de la API
 
 <details>
