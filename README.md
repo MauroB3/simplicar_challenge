@@ -28,17 +28,11 @@ $ python manage.py runserver
 <details>
 <summary> Library  </summary>
 
-  - Path: /domain/api/library/**<id>**
-    Method: GET
-
-  - Path: /domain/api/library/**<id>**
-    Method: POST
-    Body example:
-    ```
-    {
-      "name": "William Mendez"
-    }
-    ```
+| Path | Method | Body example |
+| --- | --- | --- |
+| /domaind/api/library/**{id}** | GET | - |
+| /domain/api/library/**{id}** | POST | ```json { "name": "William Mendez" } ``` |
+| /domain/api/library/ | PUT | ```json { "name": "William Mendez" } ``` |
 
 </details>
 
