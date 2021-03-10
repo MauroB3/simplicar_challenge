@@ -31,8 +31,8 @@ $ python manage.py runserver
 | Path | Method | Body example |
 | --- | --- | --- |
 | /domaind/api/library/**{id}** | GET | - |
-| /domain/api/library/**{id}** | POST | ```json { "name": "William Mendez" } ``` |
-| /domain/api/library/ | PUT | ```json { "name": "William Mendez" } ``` |
+| /domain/api/library/**{id}** | POST | ```{ "name": "William Mendez" } ``` |
+| /domain/api/library/ | PUT | ```{ "name": "William Mendez" } ``` |
 
 </details>
 
@@ -42,9 +42,42 @@ $ python manage.py runserver
 | Path | Method | Body example |
 | --- | --- | --- |
 | /domaind/api/book/**{id}** | GET | - |
-| /domain/api/book/**{id}** | POST | ```json { "title": "Libro modificado", <br /> "author": 61, "libraries": [1, 2] } ``` |
-| /domain/api/book/ | PUT | ```json { "title": "Nuevo libro", "author": 61, "libraries": [1, 2] } ``` |
+| /domain/api/book/**{id}** | POST | ```{ "title": "Libro modificado", "author": 61, "libraries": [1, 2] } ``` |
+| /domain/api/book/ | PUT | ```{ "title": "Nuevo libro", "author": 61, "libraries": [1, 2] } ``` |
 | /domain/api/book/search?text=**{texto}** | GET | - |
+</details>
+
+<details>
+<summary> Author </summary>
+
+| Path | Method | Body example |
+| --- | --- | --- |
+| /domaind/api/author/**{id}** | GET | - |
+| /domain/api/author/**{id}** | POST | ```{ "first_name": "Lisa", "last_name": "Rivera" } ``` |
+| /domain/api/book/ | PUT | ```{ "first_name": "Nuevo", "last_name": "Nuevo" } ``` |
+</details>
+
+<details>
+<summary> Book  </summary>
+
+| Path | Method | Body example |
+| --- | --- | --- |
+| /domaind/api/leads/ | POST | ``` { "email": "reekremag@gmail.com", "fullname": "Mauro", "phone": "1115161718", "library": 1 } ``` |
+
+
+Esta ruta esta protegida con JWT. Para poder utilizarla es necesario incluir en el head un token de acceso. Para obtener el token es necesario hacer un POST al path **/domain/api/token/** con el usuario y contraseña generado al principio (ya que no hay implementado un login), como se ve en la imagen:
+
+**imagen_1.jpg**
+
+Generado el token, podemos hacer el POST a **/domaind/api/leads/** tal como esta en la tabla de arriba, incluyendo el token en el header:
+
+**imagen_2.jpg**
+
+Este token expira cada 5 minutos, para obtener un nuevo token hay que hacer un POST al path **/domain/api/token/refresh/** indicando el token refresh que obtuvimos en el primer paso:
+
+**imagen_3.jpg**
+
+
 </details>
 
 
