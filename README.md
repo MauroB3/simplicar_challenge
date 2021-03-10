@@ -36,3 +36,23 @@ $ python manage.py runserver
 
 </details>
 
+<details>
+<summary> Book  </summary>
+
+| Path | Method | Body example |
+| --- | --- | --- |
+| /domaind/api/book/**{id}** | GET | - |
+| /domain/api/book/**{id}** | POST | ```json     {
+        "title": "Libro modificado",
+        "author": 61,
+        "libraries": [1, 2]
+    } ``` |
+| /domain/api/book/ | PUT | ```json     {
+        "title": "Nuevo libro",
+        "author": 61,
+        "libraries": [1, 2]
+    } ``` |
+| /domain/api/book/search?text=**{texto}** | GET | - |
+</details>
+
+
