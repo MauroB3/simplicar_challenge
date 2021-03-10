@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 
-
+from book.email_service import send_new_lead_email
 from .models import Book, Author, Library
 from .serializers import LibrarySerializer, BookSerializer, AuthorSerializer, LeadsSerializer
 
@@ -153,6 +153,8 @@ class LeadPostView(APIView):
         serializer = LeadsSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+            email_user = serializer.data['email']
+            send_new_lead_email(email_user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
