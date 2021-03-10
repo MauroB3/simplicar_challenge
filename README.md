@@ -33,6 +33,7 @@ $ python manage.py runserver
 Para que se realize el envio de email al momento de crear un lead es necesario configurar los parametros **EMAIL_HOST_USER** y **EMAIL_HOST_PASSWORD** en el archivo settings.py.
 
 # Endpoints de la API
+### Click para expandir
 
 <details>
 <summary> Library  </summary>
