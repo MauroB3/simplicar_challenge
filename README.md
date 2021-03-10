@@ -63,7 +63,7 @@ Para que se realize el envio de email al momento de crear un lead es necesario c
 | --- | --- | --- |
 | /domaind/api/author/**{id}** | GET | - |
 | /domain/api/author/**{id}** | POST | ```{ "first_name": "Lisa", "last_name": "Rivera" } ``` |
-| /domain/api/book/ | PUT | ```{ "first_name": "Nuevo", "last_name": "Nuevo" } ``` |
+| /domain/api/author/ | PUT | ```{ "first_name": "Nuevo", "last_name": "Autor" } ``` |
 </details>
 
 <details>
